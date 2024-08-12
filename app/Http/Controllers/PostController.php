@@ -22,7 +22,7 @@ class PostController extends Controller
     public function paginate2(Request $request): View
     {
         $data['post'] = Post::paginate(3);
-        $data['user'] = User::paginate(2);
+        $data['user'] = User::paginate(3);
         return view('pagination_parent', $data);
     }
 
